@@ -15,7 +15,7 @@ import Errorcomponent from "./Errorcomponent";
 import { Link } from "react-router-dom";
 
 const Coincard = ({ id,img,name,price,symbol,currencysymbol="₹" }) => (
-        <Link to={`/coin/${id}`} rel="noopener noreferrer">
+        <Link to={`/coins/${id}`} rel="noopener noreferrer">
           <Box
             bg="white"
             p={6} // Adjust padding to make the box larger

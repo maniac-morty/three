@@ -2,6 +2,7 @@ import React from 'react';
 import { Center, Spinner, Box } from "@chakra-ui/react";
 
 const Loader = () => {
+  console.log("hhh");
   return (
     <Center height="100vh"> {/* Center the content vertically and horizontally */}
       <Box>
