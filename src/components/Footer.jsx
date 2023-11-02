@@ -32,7 +32,7 @@ const Footer = () => {
           <Avatar boxSize={"28"} mb="2" />
         </WrapItem>
         <WrapItem>
-          <Text>Himanshu Semwal</Text>
+          <Text></Text>
         </WrapItem>
       </Wrap>
     </Flex>
