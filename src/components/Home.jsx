@@ -10,7 +10,7 @@ const Home = () => {
 const handleDataError = e => {
   setShowSkeleton(false)
 }
-const imgg = `https://bitcoin-png-img.s3.ap-south-1.amazonaws.com/btc.png`
+const imgg = `https://d1zqyuia6soglw.cloudfront.net/btc.png`
   return (
       <Box bgColor={"blackAlpha.900"} w = {"full"} h = {"85vh"} >
 
