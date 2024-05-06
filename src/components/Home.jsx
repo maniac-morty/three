@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import Header from './Header'
 import {motion} from "framer-motion";
@@ -6,6 +6,11 @@ import {Box,Image,Text} from "@chakra-ui/react";
 import btsrc from "../assets/btc.png"
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 const Home = () => {
+  const [showSkeleton, setShowSkeleton] = useState(true)
+const handleDataError = e => {
+  setShowSkeleton(false)
+}
+const imgg = `https://bitcoin-png-img.s3.ap-south-1.amazonaws.com/btc.png`
   return (
       <Box bgColor={"blackAlpha.900"} w = {"full"} h = {"85vh"} >
 
@@ -21,7 +26,14 @@ const Home = () => {
               repeatType :"reverse",
             }}
             >
-        <Image w={"full"} h={"full"} objectFit={"contain"} src={btsrc} alt="Bitcoin Image" filter={"grayscale(1)"} />
+          
+              
+        <Image w={"full"} h={"full"} objectFit={"contain"} 
+        onError={handleDataError}
+
+        src={(showSkeleton &&  setShowSkeleton) ? imgg:btsrc} 
+        alt="Bitcoin Image"
+        filter={"grayscale(1)"} />
             
             </motion.div>
 
