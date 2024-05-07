@@ -31,7 +31,7 @@ const imgg = `https://d1zqyuia6soglw.cloudfront.net/btc.png`
         <Image w={"full"} h={"full"} objectFit={"contain"} 
         onError={handleDataError}
 
-        src={(showSkeleton &&  setShowSkeleton) ? imgg:btsrc} 
+        src={(showSkeleton ) ? imgg:btsrc} 
         alt="Bitcoin Image"
         filter={"grayscale(1)"} />
             
